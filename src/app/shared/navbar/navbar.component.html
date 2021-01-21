@@ -1,6 +1,8 @@
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">effecs</a>
+    <a class="navbar-brand" routerLink="home" routerLinkActive="active"
+      >effecs</a
+    >
     <button
       class="navbar-toggler"
       type="button"
@@ -15,21 +17,37 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a
+            class="nav-link active"
+            aria-current="page"
+            routerLink="home"
+            routerLinkActive="active"
+            >Home</a
+          >
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Usuario</a>
+          <a class="nav-link" routerLink="usuario/1" routerLinkActive="active"
+            >Usuario</a
+          >
         </li>
       </ul>
-      <form class="d-flex">
+      <div class="d-flex">
         <input
           class="form-control me-2"
           type="search"
           placeholder="ID Usuario"
           aria-label="Search"
+          #txtInput
+          (keyup.enter)="irUsuario(txtInput.value)"
         />
-        <button class="btn btn-outline-success" type="button">Bsucar</button>
-      </form>
+        <button
+          (click)="irUsuario(txtInput.value)"
+          class="btn btn-outline-success"
+          type="button"
+        >
+          Bsucar
+        </button>
+      </div>
     </div>
   </div>
 </nav>
