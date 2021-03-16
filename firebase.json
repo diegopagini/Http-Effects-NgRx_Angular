@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/http-effects",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
